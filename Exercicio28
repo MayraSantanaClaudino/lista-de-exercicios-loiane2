@@ -1,0 +1,75 @@
+//Supermercado Tabajara
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Escolha o tipo de carne: ");
+		System.out.println("1 para Filé Duplo");
+		System.out.println("2 para Alcatra");
+		System.out.println("3 para Picanha");
+		int tipoCarne = scan.nextInt();
+		
+		double compra = 0;
+		double quantidadeCarne = 0;
+		switch (tipoCarne){
+		    case 1:
+		        System.out.println("Qual a quantidade desejada?: ");
+		        quantidadeCarne = scan.nextDouble();
+		        if (quantidadeCarne <= 5){
+		            compra = quantidadeCarne * 4.90;
+		        } else if (quantidadeCarne > 5){
+		            compra = quantidadeCarne * 5.80;
+		        }
+		        break;
+		    case 2:
+		        System.out.println("Qual a quantidade desejada?: ");
+		        quantidadeCarne = scan.nextDouble();
+		        if (quantidadeCarne <= 5){
+		            compra = quantidadeCarne * 5.90;
+		        } else if (quantidadeCarne > 5){
+		            compra = quantidadeCarne * 6.80;
+		        }
+		        break;
+		    case 3:
+		        System.out.println("Qual a quantidade desejada?: ");
+		        quantidadeCarne = scan.nextDouble();
+		        if (quantidadeCarne <= 5){
+		            compra = quantidadeCarne * 6.90;
+		        } else if (quantidadeCarne > 5){
+		            compra = quantidadeCarne * 7.80;
+		        }
+		        break;
+		    default:
+		        System.out.println("Opção inválida!");
+		        break;
+		}
+		
+		System.out.println("Qual a forma de pagamento?: ");
+		System.out.println("Digite 1 para cartão Tabajara:");
+		System.out.println("Digite outro número de 0 a 9 para outra forma de pagamento: ");
+		int pag = scan.nextInt();
+		
+		double desconto = 0;
+		double total;
+		if (pag == 1){
+		    desconto = (compra / 100) * 5;
+		    total = compra - desconto;
+		} else {
+		    total = compra;
+		}
+		
+		System.out.println("NOTA FISCAL");
+		System.out.printf("Tipo de carne: %d\n", tipoCarne);
+		System.out.printf("A quantidade, em kg, comprada: %.2f\n", quantidadeCarne);
+		System.out.printf("O valor total é: R$ %.2f\n", compra);
+		System.out.printf("A forma de pagamento é: %d\n", pag);
+		System.out.printf("O valor do desconto é R$ %.2f\n", desconto);
+		System.out.printf("O valor a ser pago é R$ %.2f\n", total);
+	}
+}

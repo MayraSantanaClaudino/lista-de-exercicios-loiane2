@@ -1,0 +1,87 @@
+//Calculadora
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+    
+    public static void ParImpar(double resultado){
+        
+        if (resultado % 2 == 0){
+            System.out.printf("O resultado da operação é um número par: %.2f\n", resultado);
+        } else {
+            System.out.printf("O resultado da operação é um número ímpar: %.2f\n", resultado);
+        }
+        
+    }
+    
+    public static void PositivoNegativo(double resultado){
+        
+        if (resultado == 0){
+            System.out.printf("O resultado da operação é: %.2f\n", resultado);
+        } else if (resultado < 0){
+            System.out.printf("O resultado da operação é um número negativo: %.2f\n", resultado);
+        } else {
+            System.out.printf("O resultado da operação é um número positivo: %.2f\n", resultado);
+        }
+        
+    }
+    
+    public static void InteiroDecimal (double resultado){
+        
+        if (resultado == (int)resultado){
+            System.out.printf("O resultado da operação é um número inteiro: %.2f\n", resultado);
+        } else {
+            System.out.printf("o resultado da operação é um número decimal: %.2f\n", resultado);
+        }
+        
+    }
+    
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Digite um número: ");
+		double n1 = scan.nextDouble();
+		System.out.println("Digite outro número: ");
+		double n2 = scan.nextDouble();
+		
+		System.out.println("Digite 1 para adição: ");
+		System.out.println("Digite 2 para subtração: ");
+		System.out.println("Digite 3 para multiplicação: ");
+		System.out.println("Digite 4 para divisão: ");
+		int op = scan.nextInt();
+		double resultado;
+		
+		switch (op){
+		    case 1:
+		        resultado = n1 + n2;
+		        ParImpar(resultado);
+		        PositivoNegativo(resultado);
+		        InteiroDecimal(resultado);
+		        break;
+		    case 2:
+		        resultado = n1 - n2;
+		        ParImpar(resultado);
+		        PositivoNegativo(resultado);
+		        InteiroDecimal(resultado);
+		        break;
+		    case 3:
+		        resultado = n1 * n2;
+		        ParImpar(resultado);
+		        PositivoNegativo(resultado);
+		        InteiroDecimal(resultado);
+		        break;
+		    case 4:
+		        resultado = n1 / n2;
+		        ParImpar(resultado);
+		        PositivoNegativo(resultado);
+		        InteiroDecimal(resultado);
+		        break;
+		    default:
+		        System.out.println("Opção inválida!");
+		}
+		
+	}
+}

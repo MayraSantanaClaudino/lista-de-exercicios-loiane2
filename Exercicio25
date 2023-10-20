@@ -1,0 +1,55 @@
+//Assassino, Cúmplice, Suspeito ou Inocente
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		int pontos = 0;
+		
+		System.out.println("Telefonou para a vítima? S para Sim e N para Não");
+		char resposta = scan.next().charAt(0);
+		if (resposta.upper() == 'S'){
+		    pontos += 1;
+		}
+		
+		System.out.println("Esteve no local do crime? S para Sim e N para Não");
+		char resposta = scan.next().charAt(0);
+		if (resposta.upper() == 'S'){
+		    pontos += 1;
+		}
+		
+		System.out.println("Mora perto da vítima? S para Sim e N para Não");
+		char resposta = scan.next().charAt(0);
+		if (resposta.upper() == 'S'){
+		    pontos += 1;
+		}
+		
+		System.out.println("Devia para a vítima? S para Sim e N para Não");
+		char resposta = scan.next().charAt(0);
+		if (resposta.upper() == 'S'){
+		    pontos += 1;
+		}
+		
+		System.out.println("Já trabalhou com a vítima? S para Sim e N para Não");
+		char resposta = scan.next().charAt(0);
+		if (resposta.upper() == 'S'){
+		    pontos += 1;
+		}
+		
+		if (pontos < 2){
+		    System.out.println("Inocente");
+		} else if (pontos == 2){
+		    System.out.println("Suspeito");
+		} else if (pontos < 5){
+		    System.out.println("Cúmplice");
+		} else {
+		    System.out.println("Assassino");
+		}
+		
+	}
+}

@@ -1,0 +1,39 @@
+//Cálculo do combustível
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Quantos litros vc quer abastecer seu veículo?: ");
+		double litros = scan.nextDouble();
+		System.out.println("Digite A se quer abastecer o seu veículo com Álcool, e G se quiser abastecer seu veículo com Gasolina");
+		char combustivel = scan.next().charAt(0);
+		
+		double gasolina = 2.50 * litros;
+		double alcool = 1.90 * litros;
+		
+		if (combustivel.upper() == 'A'){
+		    if (litros <= 20){
+		        double descontoAlcool = alcool - ((alcool / 100) * 3);
+		        System.out.printf("O total é R$ %.2f", descontoAlcool);
+		    } else if (litros > 20){
+		        double descontoAlcool = alcool - ((alcool / 100) * 5);
+		        System.out.printf("O total é de R$.2f", descontoAlcool);
+		    }
+		} else if (combustivel.upper() == 'G') {
+		    if (litros <= 20){
+		        double descontoGasolina = gasolina - ((gasolina / 100) * 4);
+		        System.out.printf("O total é de R$.2f", descontoGasolina);
+		    } else if (litros > 20){
+		        double descontoGasolina = gasolina - ((gasolina / 100) * 6);
+		        System.out.printf("O total é de R$.2f", descontoGasolina);
+		    }
+		}
+		
+	}
+}

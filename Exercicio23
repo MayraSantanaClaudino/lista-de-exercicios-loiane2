@@ -1,0 +1,21 @@
+//Decimal ou inteiro
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Digite um número: ");
+		double valor = scan.nextDouble();
+		
+		if (valor == (int)valor){
+		    System.out.println("Inteiro");
+		} else {
+		    System.out.println("Decimal");
+		}
+	}
+}

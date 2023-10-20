@@ -1,0 +1,41 @@
+//Morangos e maçãs
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Digite a quantidade, em kg, de maçãs: ");
+		double kgMaca = scan.nextDouble();
+		
+		double valpagMaca;
+		if (kgMaca <= 5){
+		    valpagMaca = kgMaca * 1.8;
+		} else {
+		    valpagMaca = kgMaca * 1.5;
+		}
+		
+		System.out.println("Digite a quantidade, em kg, de morangos: ");
+		double kgMorangos = scan.nextDouble();
+		
+		double valpagMorangos;
+		if (kgMorangos <= 5){
+		    valpagMorangos = kgMorangos * 2.5;
+		} else {
+		    valpagMorangos = kgMorangos * 2.2;
+		}
+		
+		double total;
+		if ((valpagMorangos + valpagMaca) <= 25){
+		    total = valpagMaca + valpagMorangos;
+		} else {
+		    total = valpagMorangos + valpagMaca - (((valpagMorangos + valpagMaca)/100) * 10);
+		}
+		
+		System.out.printf("O total a ser pago é: R$.2f", total);
+	}
+}
