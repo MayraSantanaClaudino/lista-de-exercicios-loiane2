@@ -1,0 +1,26 @@
+//Matutino, Vespertino ou Noturno
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe seu turno (M ou m para Matutino, V ou v para Vespertino e N ou n para Noturno)");
+		char turno = scan.next().charAt(0);
+		
+		if (turno == 'M' || turno == 'm'){
+		    System.out.println("Bom dia!");
+		} else if (turno == 'V' || turno == 'v'){
+		    System.out.println("Boa tarde!");
+		} else if (turno == 'N' || turno == 'n'){
+		    System.out.println("Boa noite!");
+		} else {
+		    System.out.println("Mensagem inválida");
+		}
+		
+	}
+}

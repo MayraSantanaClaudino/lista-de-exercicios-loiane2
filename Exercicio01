@@ -1,0 +1,26 @@
+//Comparação entre dois números
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Comparação entre dois números");
+		System.out.println("Informe o primeiro número");
+		int n1 = scan.nextInt();
+		System.out.println("Informe o segundo número");
+		int n2 = scan.nextInt();
+		
+		if (n1 > n2){
+		    System.out.println(n1 + " é maior que " + n2);
+		} else if (n1 < n2){
+		    System.out.println(n1 + " é menor que " + n2);
+		} else if (n1 == n2){
+		    System.out.println(n1 + " é igual a " + n2);
+		}
+	}
+}

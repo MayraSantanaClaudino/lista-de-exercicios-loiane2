@@ -1,0 +1,23 @@
+//Verificação de sexo
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe seu sexo (F para Feminino e M para Masculino)");
+		char sexo = scan.next().charAt(0);
+		
+		if (sexo == 'F'){
+		    System.out.println("Sexo Feminino");
+		} else if (sexo == 'M'){
+		    System.out.println("Sexo Masculino");
+		} else {
+		    System.out.println("Sexo Inválido");
+		}
+	}
+}

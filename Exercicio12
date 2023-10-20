@@ -1,0 +1,69 @@
+//Cálculo do IR, INSS, FGTS, sindicato e do salário baseado no valor da hora trabalhada e na quantidade de horas trabalhadas
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe o valor da hora trabalhada: ");
+		double valorHora = scan.nextDouble();
+		System.out.println("Informe a quantidade de horas trabalhadas: ");
+		int horaTrabalhada = scan.nextInt();
+		
+		double salarioBruto = valorHora * horaTrabalhada;
+		double fgts = (salarioBruto / 100) * 11;
+		double sindicato = (salarioBruto / 100) * 3;
+		double inss = (salarioBruto / 100) * 10;
+		
+		if (salarioBruto <= 900){
+		    double ir = 0;
+		    double totalDescontos = ir + inss;
+		    double salarioLiquido = salarioBruto - totalDescontos;
+		    System.out.printf("O valor do salário bruto é: %.2f\n", salarioBruto);
+		    System.out.printf("O desconto aplicado no IR é: %.2f\n", ir);
+		    System.out.printf("O desconto aplicado no INSS é: %.2f\n", inss);
+		    System.out.printf("O desconto aplicado no FGTS é: %.2f\n", fgts);
+		    System.out.printf("O desconto aplicado no sindicato é: %.2f\n", sindicato);
+		    System.out.printf("O total de descontos aplicados é: %.2f\n", totalDescontos);
+		    System.out.printf("O salário líquido é: %.2f", salarioLiquido);
+		} else if (salarioBruto > 900 && salarioBruto <= 1500){
+		    double ir = (salarioBruto / 100) * 5;
+		    double totalDescontos = ir + inss;
+		    double salarioLiquido = salarioBruto - totalDescontos;
+		    System.out.printf("O valor do salário bruto é: %.2f\n", salarioBruto);
+		    System.out.printf("O desconto aplicado no IR é: %.2f\n", ir);
+		    System.out.printf("O desconto aplicado no INSS é: %.2f\n", inss);
+		    System.out.printf("O desconto aplicado no FGTS é: %.2f\n", fgts);
+		    System.out.printf("O desconto aplicado no sindicato é: %.2f\n", sindicato);
+		    System.out.printf("O total de descontos aplicados é: %.2f\n", totalDescontos);
+		    System.out.printf("O salário líquido é: %.2f", salarioLiquido);
+		} else if (salarioBruto > 1500 && salarioBruto <= 2500){
+		    double ir = (salarioBruto / 100) * 10;
+		    double totalDescontos = ir + inss;
+		    double salarioLiquido = salarioBruto - totalDescontos;
+		    System.out.printf("O valor do salário bruto é: %.2f\n", salarioBruto);
+		    System.out.printf("O desconto aplicado no IR é: %.2f\n", ir);
+		    System.out.printf("O desconto aplicado no INSS é: %.2f\n", inss);
+		    System.out.printf("O desconto aplicado no FGTS é: %.2f\n", fgts);
+		    System.out.printf("O desconto aplicado no sindicato é: %.2f\n", sindicato);
+		    System.out.printf("O total de descontos aplicados é: %.2f\n", totalDescontos);
+		    System.out.printf("O salário líquido é: %.2f", salarioLiquido);
+		} else if (salarioBruto > 2500){
+		    double ir = (salarioBruto / 100) * 20;
+		    double totalDescontos = ir + inss;
+		    double salarioLiquido = salarioBruto - totalDescontos;
+		    System.out.printf("O valor do salário bruto é: %.2f\n", salarioBruto);
+		    System.out.printf("O desconto aplicado no IR é: %.2f\n", ir);
+		    System.out.printf("O desconto aplicado no INSS é: %.2f\n", inss);
+		    System.out.printf("O desconto aplicado no FGTS é: %.2f\n", fgts);
+		    System.out.printf("O desconto aplicado no sindicato é: %.2f\n", sindicato);
+		    System.out.printf("O total de descontos aplicados é: %.2f\n", totalDescontos);
+		    System.out.printf("O salário líquido é: %.2f", salarioLiquido);
+		}
+		
+	}
+}

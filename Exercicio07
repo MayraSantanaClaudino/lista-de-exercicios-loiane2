@@ -1,0 +1,26 @@
+//Maior e menor entre três números
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe um número");
+		double n1 = scan.nextDouble();
+		System.out.println("Informe outro número");
+		double n2 = scan.nextDouble();
+		System.out.println("Informe o último número");
+		double n3 = scan.nextDouble();
+		
+		double maior = Math.max(n2, Math.max(n3, n1));
+		double menor = Math.min(n2, Math.min(n3, n1));
+		
+		System.out.printf("Maior número: %.2f\n", maior);
+		System.out.printf("Menor número: %.2f", menor);
+		
+	}
+}

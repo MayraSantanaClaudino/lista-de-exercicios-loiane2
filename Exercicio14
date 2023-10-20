@@ -1,0 +1,40 @@
+//Cálculo de média de dois números
+//Mayra Santana, 2023
+
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe a primeira nota: ");
+		double n1 = scan.nextDouble();
+		System.out.println("Informe a segunda nota: ");
+		double n2 = scan.nextDouble();
+		System.out.printf("A primeira nota é: %.2f\n", n1);
+		System.out.printf("A segunda nota é: %.2f\n", n2);
+		
+		double media = (n1 + n2)/2;
+		
+		if (media >= 0 && media <= 4){
+		    System.out.printf("A média é: %.2f\n", media);
+		    System.out.println("O conceito da nota é E");
+		    System.out.println("Reprovado");
+		} else if (media >= 4 && media <= 6){
+		    System.out.printf("A média é: %.2f\n", media);
+		    System.out.println("O conceito da nota é D");
+		    System.out.println("Reprovado");
+		} else if (media >= 6 && media <= 7.5){
+		    System.out.printf("A média é: %.2f\n", media);
+		    System.out.println("O conceito da nota é C");
+		    System.out.println("Aprovado");
+		} else if (media >= 7.5 && media <= 9){
+		    System.out.printf("A média é: %.2f\n", media);
+		    System.out.println("O conceito da média é B");
+		    System.out.println("Aprovado");
+		} else if (media >= 9 && media <= 10){
+		    System.out.printf("A média é: %.2f\n", media);
+		    System.out.println("O conceito da nota é A");
+		    System.out.println("Aprovado");
+		}
+  }
+}

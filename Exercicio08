@@ -1,0 +1,24 @@
+//O menor preço
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe o preco do primeiro produto");
+		double n1 = scan.nextDouble();
+		System.out.println("Informe o preço do segundo produto");
+		double n2 = scan.nextDouble();
+		System.out.println("Informe o preço do último produto");
+		double n3 = scan.nextDouble();
+		
+		double menor = Math.min(n2, Math.min(n3, n1));
+		
+		System.out.printf("O produto de menor preço é: %.2f", menor);
+		
+	}
+}

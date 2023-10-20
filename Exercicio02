@@ -1,0 +1,24 @@
+//Positivo, negativo ou igual a 0
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Positivo, negativo ou igual a 0");
+		System.out.println("Informe um número");
+		int n1 = scan.nextInt();
+		
+		if (n1 > 0){
+		    System.out.println(n1 + " é um número positivo");
+		} else if (n1 < 0){
+		    System.out.println(n1 + " é um número negativo");
+		} else if (n1 == 0){
+		    System.out.println(n1 + " é igual a 0");
+		}
+	}
+}

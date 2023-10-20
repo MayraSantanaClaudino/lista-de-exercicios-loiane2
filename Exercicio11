@@ -1,0 +1,45 @@
+//Aumento de salário
+//Mayra Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe seu salario");
+		double salarioBruto = scan.nextDouble();
+		
+		if (salarioBruto <= 280){
+		    double aumento = (salarioBruto / 100) * 20;
+		    double salario = salarioBruto + aumento;
+		    System.out.printf("O valor do salário bruto é: %.2f\n", salarioBruto);
+		    System.out.println("O percentual de aumento aplicado é de 20%");
+		    System.out.printf("O valor do aumento é: %.2f\n", aumento);
+		    System.out.printf("O novo salário é: %.2f", salario);
+		} else if (salarioBruto > 280 && salarioBruto <= 700){
+		    double aumento = (salarioBruto / 100) * 15;
+		    double salario = salarioBruto + aumento;
+		    System.out.printf("O valor do salário bruto é: %.2f\n", salarioBruto);
+		    System.out.println("O percentual de aumento aplicado é de 15%");
+		    System.out.printf("O valor do aumento é: %.2f\n", aumento);
+		    System.out.printf("O novo salário é: %.2f", salario);
+		} else if (salarioBruto > 700 && salarioBruto <= 1500){
+		    double aumento = (salarioBruto / 100) * 10;
+		    double salario = salarioBruto + aumento;
+		    System.out.printf("O valor do salário bruto é: %.2f\n", salarioBruto);
+		    System.out.println("O percentual de aumento aplicado é de 10%");
+		    System.out.printf("O valor do aumento é: %.2f\n", aumento);
+		    System.out.printf("O novo salário é: %.2f", salario);
+		} else if (salarioBruto > 1500){
+		    double aumento = (salarioBruto / 100) * 5;
+		    double salario = salarioBruto + aumento;
+		    System.out.printf("O valor do salário bruto é: %.2f\n", salarioBruto);
+		    System.out.println("O percentual de aumento aplicado é de 5%");
+		    System.out.printf("O valor do aumento aplicado é: %.2f\n", aumento);
+		    System.out.printf("O novo salário é: %.2f", salario);
+		}
+	}
+}
